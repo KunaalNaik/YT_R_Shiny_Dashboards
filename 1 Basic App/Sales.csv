@@ -1,0 +1,17 @@
+SalesRep,Region,Month,Sales,Units_Sold
+Amy,North,Q1,24971,84
+Amy,South,Q2,25749,557
+Amy,East,Q3,24437,95
+Amy,West,Q4,25355,706
+Bob,North,Q1,25320,231
+Bob,South,Q2,25999,84
+Bob,East,Q3,22639,260
+Bob,West,Q4,23949,109
+Chuck,North,Q1,20280,453
+Chuck,South,Q2,21584,114
+Chuck,East,Q3,19625,83
+Chuck,West,Q4,19832,70
+Doug,North,Q1,25150,242
+Doug,South,Q2,29061,146
+Doug,East,Q3,27113,120
+Doug,West,Q4,25953,81
