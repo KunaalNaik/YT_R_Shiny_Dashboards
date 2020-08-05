@@ -1,3 +1,5 @@
+library(shiny)
+
 server <- function(input, output, session) {
   
   output$plot <- renderPlot({
@@ -9,7 +11,7 @@ server <- function(input, output, session) {
 }
 
 ui <- basicPage(
-  h1("Basic Bar Plot"),
+  h1("R Shiny Bar Plot"),
   plotOutput("plot")
 )
 

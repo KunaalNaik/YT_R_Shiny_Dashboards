@@ -13,7 +13,7 @@ server <- function(input, output, session) {
 }
 
 ui <- basicPage(
-  h1("ggplot within R Shiny"),
+  h1("R Shiny Bar Plot using ggplot"),
   plotOutput("plot")
 )
 

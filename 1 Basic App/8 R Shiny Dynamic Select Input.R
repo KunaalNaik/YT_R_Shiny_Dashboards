@@ -18,7 +18,7 @@ server <- function(input, output, session) {
 }
 
 ui <- basicPage(
-  h1("Using Reactive"),
+  h1("R Shiny Dynamic Select Input"),
   selectInput(inputId = "sel_SalesRep",
               label = "Choose SalesRep",
               list("Amy","Bob")),
