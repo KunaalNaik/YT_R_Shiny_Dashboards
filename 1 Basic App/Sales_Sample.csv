@@ -1,4 +1,4 @@
-SalesRep,Region,Month,Sales,Units_Sold
+SalesRep,Region,QTR,Sales,Units_Sold
 Amy,North,Q1,24971,84
 Amy,South,Q2,25749,557
 Amy,East,Q3,24437,95
