@@ -20,7 +20,9 @@ ui <-   basicPage(
   selectInput("prodCat",
               label = "Product Category",
               choices = c("Category 1", "Category 2"),
-              selected = "Category 1")
+              selected = "Category 1"), 
+  
+  textOutput("selected_var")
   
 )
 
