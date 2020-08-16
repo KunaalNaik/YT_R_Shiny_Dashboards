@@ -1,3 +1,6 @@
+library(shiny)
+library(dplyr)
+
 server <- function(input, output, session) {
   
   output$plot <- renderPlot({

@@ -10,7 +10,7 @@ server <- function(input, output, session) {
 
 #Add 2 Drop Down Selection for Region and Product Category
 ui <-   basicPage(
-  h1("R Shiny selectInput & diaply text from selectInput"),
+  h1("R Shiny selectInput & display text from selectInput"),
 
   selectInput("region",
               label = "Region",
