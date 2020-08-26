@@ -6,8 +6,8 @@ server <- function(input, output, session) {
   output$plot <- renderPlot({
     sales = read.csv("Sales_Sample.csv", header = TRUE,  sep = ",")
     
-    #Summarize Data and then Plot
-    df <- sales %>% group_by(QTR) %>% summarise(Sales = sum(Sales))
+    #Summarize Data and Plot Chart
+    df <- sales %>% group_by(QTR) %>% summarize(Sales = sum(Sales))
     
     #Plot 
     barplot(df$Sales)

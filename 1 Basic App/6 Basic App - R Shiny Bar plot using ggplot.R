@@ -12,7 +12,7 @@ server <- function(input, output, session) {
     
     #Plot 
     g <- ggplot(df, aes( y = Sales, x = QTR))
-    g+geom_bar(stat = "sum")
+    g + geom_bar(stat = "sum")
   })
 }
 
