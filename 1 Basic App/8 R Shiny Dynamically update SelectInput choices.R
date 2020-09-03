@@ -13,6 +13,11 @@ server <- function(input, output, session) {
     df <- sales %>% filter(SalesRep %in% input$sel_SalesRep) %>%  group_by(QTR) %>% summarise(Sales = sum(Sales))
   })
   
+  #Update SelectInput Dynamically
+  observe({
+    updateSelectInput(session, "sel_SalesRep", choices = sales$SalesRep) 
+  })
+  
   #Plot 
   output$plot <- renderPlot({
     g <- ggplot(data(), aes( y = Sales, x = QTR))
@@ -21,10 +26,10 @@ server <- function(input, output, session) {
 }
 
 ui <- basicPage(
-  h1("R Shiny interactive Bar Chart using Reactive and Render"),
+  h1("R Shiny Dynamically update SelectInput choices"),
   selectInput(inputId = "sel_SalesRep",
               label = "Choose Sales Rep",
-              list("Amy","Bob","Chuck","Doug")),
+              "Names"),
   plotOutput("plot")
 )
 
