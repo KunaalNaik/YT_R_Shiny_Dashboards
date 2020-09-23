@@ -15,7 +15,7 @@ server <- function(input, output, session) {
   
   #Update SelectInput Dynamically
   observe({
-    updateSelectInput(session, "sel_SalesRep", choices = sales$SalesRep) 
+    updateSelectInput(session, "sel_SalesRep", choices = sales$SalesRep)
   })
   
   #Plot 
@@ -28,14 +28,14 @@ server <- function(input, output, session) {
 
 ui <- fluidPage(
   
-  titlePanel("R Shiny Fluid Layout"),
+  titlePanel("R Shiny Fluid Layout with Sidebar"),
   
   sidebarLayout(
     
     sidebarPanel(
       selectInput(inputId = "sel_SalesRep",
-                  label = "Choose Sales Rep",
-                  "Names")
+                                label = "Choose Sales Rep",
+                                "Names")
     ),
     
     mainPanel(
@@ -44,8 +44,9 @@ ui <- fluidPage(
   )
 )
 
-#ui <- fluidPage(
-#  h1("R Shiny interactive Bar Chart using Reactive and Render"),
+
+#ui <- basicPage(
+#  h1("R Shiny Fluid Layout with Sidebar"),
 #  selectInput(inputId = "sel_SalesRep",
 #              label = "Choose Sales Rep",
 #              "Names"),
@@ -53,8 +54,3 @@ ui <- fluidPage(
 #)
 
 shinyApp(ui = ui, server = server)
-
-
-
-#Make List Dynamic
-#https://stackoverflow.com/questions/40152857/how-to-dynamically-populate-dropdown-box-choices-in-shiny-dashboard

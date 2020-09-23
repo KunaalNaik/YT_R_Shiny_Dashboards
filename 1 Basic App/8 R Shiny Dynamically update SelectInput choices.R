@@ -15,7 +15,7 @@ server <- function(input, output, session) {
   
   #Update SelectInput Dynamically
   observe({
-    updateSelectInput(session, "sel_SalesRep", choices = sales$SalesRep) 
+    updateSelectInput(session, "sel_SalesRep", choices = sales$SalesRep)
   })
   
   #Plot 
@@ -26,7 +26,7 @@ server <- function(input, output, session) {
 }
 
 ui <- basicPage(
-  h1("R Shiny Dynamically update SelectInput choices"),
+  h1("R Shiny Dynamically create Drop Down List"),
   selectInput(inputId = "sel_SalesRep",
               label = "Choose Sales Rep",
               "Names"),
@@ -34,8 +34,3 @@ ui <- basicPage(
 )
 
 shinyApp(ui = ui, server = server)
-
-
-
-#Make List Dynamic
-#https://stackoverflow.com/questions/40152857/how-to-dynamically-populate-dropdown-box-choices-in-shiny-dashboard
